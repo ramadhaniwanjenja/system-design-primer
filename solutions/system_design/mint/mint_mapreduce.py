@@ -46,7 +46,7 @@ class SpendingByCategory(MRJob):
         yield key, sum(values)
 
     def steps(self):
-        """Run the map and reduce steps."""
+        """Run the map and reduce steps available."""
         return [
             self.mr(mapper=self.mapper,
                     reducer=self.reducer)
